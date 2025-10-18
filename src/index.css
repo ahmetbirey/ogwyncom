@@ -835,14 +835,16 @@ a { color: inherit; text-decoration: none; transition: background-color 0.2s eas
 .article-page { padding: 12rem 5% 6rem 5%; }
 .article-header { text-align: left; max-width: 800px; margin: 0 auto 2.5rem auto; }
 .article-header h1 { font-size: var(--font-size-h1); }
-.article-main-image { 
-    max-width: 800px; /* Maksimum genişliği koru */
-    width: 100%;      /* Kapsayıcısına göre genişliği ayarla */
-    height: auto;     /* Yüksekliği otomatik olarak oranına göre ayarla */
-    margin: 0 auto 2.5rem auto; /* Dikey boşlukları düzenle */
-    border-radius: 10px; /* Köşeleri yuvarlat */
-    display: block;   /* Satır içi boşlukları kaldır ve margin'in çalışmasını sağla */
-    background-color: var(--dark-gray); /* Resim yüklenemezse arka plan rengi */
+.article-main-image {
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    padding-bottom: 56.25%; /* 16:9 oranını korumak için */
+    height: 0;
+    border-radius: 10px;
+    background-size: contain; /* Görseli kırpmadan sığdır */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; /* Kenar boşlukları için sayfa arka planı */
 }
 .article-content { max-width: 800px; margin: 0 auto; color: var(--white); }
 .article-content h2 { font-size: 1.75rem; }
