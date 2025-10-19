@@ -1,6 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
+import { Helmet } from 'react-helmet-async';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { useArticle } from '../hooks/useArticles';
@@ -40,8 +41,21 @@ const Article = () => {
     return <Navigate to="/404" replace />;
   }
 
+  // Dinamik canonical URL oluşturma
+  const canonicalUrl = `https://ogwyn.com/article/${article.slug}`;
+
   return (
     <div className="article-page">
+      <Helmet>
+        {/* Dinamik olarak makale başlığını basıyoruz */}
+        <title>{article.seoTitle || article.title}</title>
+        
+        {/* Dinamik olarak meta açıklamasını basıyoruz */}
+        <meta name="description" content={article.metaDescription || article.excerpt} />
+        
+        {/* En Önemli Adım: Dinamik canonical etiketi */}
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
       <AnimatedSection>
         <header className="article-header">
           <h1>{article.title}</h1>
