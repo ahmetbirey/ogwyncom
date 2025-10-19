@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { addDoc, collection } from 'firebase/firestore';
-import { db } from '../config/firebase';
 import AnimatedSection from '../components/AnimatedSection';
+import { submitHubPreorder } from '../config/firebase';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, User, Mail, Phone, Building, MessageSquare, Loader2, ArrowRight } from 'lucide-react';
@@ -167,16 +166,11 @@ const HubPreorder = () => {
     setFieldErrors({});
 
     try {
-      await addDoc(collection(db, 'hub-preorders'), {
-        ...formData,
-        submittedAt: new Date(),
-        status: 'pending'
-      });
-      
+      await submitHubPreorder(formData);
       setIsSubmitted(true);
     } catch (err) {
       console.error('Error submitting preorder:', err);
-      setError('Bir hata oluştu. Lütfen tekrar deneyin.');
+      setError(err.message || 'Bir hata oluştu. Lütfen tekrar deneyin.');
     } finally {
       setIsSubmitting(false);
     }

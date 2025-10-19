@@ -52,7 +52,8 @@ const staticPages = [
   { url: '/magaza', priority: '0.8', changefreq: 'weekly' },
   { url: '/ogwyn-ai', priority: '0.8', changefreq: 'monthly' },
   { url: '/iletisim', priority: '0.7', changefreq: 'monthly' },
-  { url: '/gizlilik-politikasi', priority: '0.3', changefreq: 'yearly' }
+  { url: '/gizlilik-politikasi', priority: '0.3', changefreq: 'yearly' },
+  { url: '/hub/on-siparis', priority: '0.6', changefreq: 'monthly' }
 ];
 
 async function generateSitemap() {
