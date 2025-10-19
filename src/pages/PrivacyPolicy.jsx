@@ -1,8 +1,13 @@
 import AnimatedSection from '../components/AnimatedSection';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy = () => {
   return (
     <div className="article-page">
+      <Helmet>
+        <title>Gizlilik Politikası - OGW Marketing Studio</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <AnimatedSection>
         <header className="article-header">
           <h1>Gizlilik Politikası</h1>

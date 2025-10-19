@@ -119,7 +119,7 @@ async function generateSitemap() {
 
     // Statik sayfaları ekle
     staticPages.forEach(page => {
-      const lastmod = new Date().toISOString().split('T')[0];
+      const lastmod = new Date().toISOString().split('T')[0]; // Betiğin çalıştığı günün tarihini kullan
       sitemap += `  <url>
     <loc>${BASE_URL}${page.url}</loc>
     <lastmod>${lastmod}</lastmod>
@@ -132,7 +132,13 @@ async function generateSitemap() {
 
     // Makale sayfalarını ekle
     articles.forEach(article => {
-      const lastmod = new Date(article.lastmod).toISOString().split('T')[0];
+      // Tarih formatının her zaman geçerli olduğundan emin olalım
+      let lastmod;
+      try {
+        lastmod = new Date(article.lastmod).toISOString().split('T')[0];
+      } catch (e) {
+        lastmod = new Date().toISOString().split('T')[0]; // Hata durumunda bugünün tarihini kullan
+      }
       sitemap += `  <url>
     <loc>${BASE_URL}/article/${article.slug}</loc>
     <lastmod>${lastmod}</lastmod>
