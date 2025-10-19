@@ -7,6 +7,7 @@ const PrivacyPolicy = () => {
       <Helmet>
         <title>Gizlilik Politikası - OGW Marketing Studio</title>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://ogwyn.com/gizlilik-politikasi" />
       </Helmet>
       <AnimatedSection>
         <header className="article-header">

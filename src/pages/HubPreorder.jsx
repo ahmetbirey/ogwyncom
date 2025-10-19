@@ -3,6 +3,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle, User, Mail, Phone, Building, MessageSquare, Loader2, ArrowRight } from 'lucide-react';
 
 const HubPreorder = () => {
@@ -27,10 +28,6 @@ const HubPreorder = () => {
     'Kişiselleştirilmiş AI Agent',
     'Sosyal Medya Chatbotları'
   ];
-
-  useEffect(() => {
-    document.title = 'OGW HUB Ön Sipariş - Pazarlama Araçlarınız Tek Yerde';
-  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -206,6 +203,12 @@ const HubPreorder = () => {
 
   return (
     <>
+      <Helmet>
+        <title>OGW HUB Ön Sipariş - Pazarlama Araçlarınız Tek Yerde</title>
+        <link rel="canonical" href="https://ogwyn.com/hub/on-siparis" />
+        <meta name="description" content="OGW HUB'ın lansmanından önce ön sipariş vererek özel fiyatlandırma ve öncelikli erişim fırsatını kaçırmayın. Formu doldurun, ekibimiz sizinle iletişime geçsin." />
+      </Helmet>
+
       <AnimatedSection 
         animationType="content-section" 
         style={{ paddingTop: '12rem', paddingBottom: '6rem' }}
