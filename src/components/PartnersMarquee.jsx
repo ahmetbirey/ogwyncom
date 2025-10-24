@@ -15,6 +15,8 @@ const PartnersMarquee = () => {
               key={`${partner.id}-${index}`}
               src={partner.logo}
               alt={`${partner.name} Logo`}
+              width={partner.width}
+              height={partner.height}
             />
           ))}
         </div>

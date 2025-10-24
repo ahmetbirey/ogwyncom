@@ -1,6 +1,9 @@
 import AnimatedSection from '../components/AnimatedSection';
 
+import useCanonical from '../hooks/useCanonical';
+
 const Contact = () => {
+  useCanonical('https://ogwyn.com/iletisim');
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Implement contact form submission

@@ -3,7 +3,10 @@ import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
 import { Bot, MessageCircleMore } from 'lucide-react';
 
+import useCanonical from '../hooks/useCanonical';
+
 const Hub = () => {
+  useCanonical('https://ogwyn.com/hub');
   useEffect(() => {
     document.title = 'OGW HUB - Projelerinizi Tek Merkezden Yönetin';
   }, []);
@@ -27,7 +30,7 @@ const Hub = () => {
       <div className="ai-features-container">
         <div className="ai-feature-block">
           <BackgroundImageLoader 
-            src="images/seo-analyser.jpg"
+            src="images/seo-analyser.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">
@@ -40,7 +43,7 @@ const Hub = () => {
 
         <div className="ai-feature-block reverse">
           <BackgroundImageLoader 
-            src="images/seller-optimizer.jpg"
+            src="images/seller-optimizer.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">
@@ -53,7 +56,7 @@ const Hub = () => {
 
         <div className="ai-feature-block">
           <BackgroundImageLoader 
-            src="images/team-crm.jpg"
+            src="images/team-crm.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">

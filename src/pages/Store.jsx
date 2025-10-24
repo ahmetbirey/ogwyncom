@@ -1,6 +1,9 @@
 import AnimatedSection from '../components/AnimatedSection';
 
+import useCanonical from '../hooks/useCanonical';
+
 const Store = () => {
+  useCanonical('https://ogwyn.com/magaza');
   return (
     <AnimatedSection 
       animationType="content-section" 

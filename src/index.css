@@ -414,7 +414,7 @@ a { color: inherit; text-decoration: none; transition: background-color 0.2s eas
 }
 .mobile-nav { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; height: 100svh; background: var(--main-bg); opacity: 0; visibility: hidden; transform: scale(0.95); transition: opacity 0.4s ease, visibility 0s 0.4s, transform 0.4s ease; z-index: 999; }
 .mobile-nav.is-active { opacity: 1; visibility: visible; transform: scale(1); }
-.mobile-nav .nav-link { font-size: 2rem; color: inherit; font-family: inherit; }
+.mobile-nav .nav-link { font-size: 2rem; color: inherit; font-family: inherit; padding: 1rem; }
 
 /* Masaüstü Stilleri (993px ve üstü) */
 @media (min-width: 993px) {
@@ -943,7 +943,7 @@ a { color: inherit; text-decoration: none; transition: background-color 0.2s eas
 }
 .ai-feature-image {
     flex: 1 1 50%;
-    min-height: 400px;
+    aspect-ratio: 16 / 9;
     background-color: var(--dark-gray);
     border-radius: var(--border-radius);
     background-size: cover;
@@ -1002,18 +1002,10 @@ a { color: inherit; text-decoration: none; transition: background-color 0.2s eas
     .ai-feature-text {
         text-align: center;
     }
-    .ai-feature-image {
-        min-height: 300px;
-        height: 300px;
-    }
 }
 @media (max-width: 768px) {
     .instagram-widget-container {
         grid-template-columns: 1fr;
-    }
-    .ai-feature-image {
-        min-height: 250px;
-        height: 250px;
     }
     .bulten-card-image {
         height: 180px;
@@ -1029,10 +1021,6 @@ a { color: inherit; text-decoration: none; transition: background-color 0.2s eas
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
-    .ai-feature-image {
-        min-height: 200px;
-        height: 200px;
-    }
     .service-card {
         height: 280px;
         width: 240px;

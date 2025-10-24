@@ -5,7 +5,10 @@ import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
 import { CheckCircle, User, Mail, Phone, Building, MessageSquare, Loader2, ArrowRight } from 'lucide-react';
 
+import useCanonical from '../hooks/useCanonical';
+
 const HubPreorder = () => {
+  useCanonical('https://ogwyn.com/hub/on-siparis');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -220,7 +223,7 @@ const HubPreorder = () => {
       <div className="ai-features-container">
         <div className="ai-feature-block">
           <BackgroundImageLoader 
-            src="/images/seo-analyser.jpg"
+            src="/images/seo-analyser.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">

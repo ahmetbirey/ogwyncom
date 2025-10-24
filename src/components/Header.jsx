@@ -34,7 +34,7 @@ const Header = () => {
       <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <Link to="/" className="logo">
-            <img src="/images/logo.svg" alt="OGW Logo" />
+            <img src="/images/logo.svg" alt="OGW Logo" width="88" height="35" />
           </Link>
           <nav className="main-nav-desktop">
             {navigationData.mainNavigation.map((item) => (

@@ -2,7 +2,10 @@ import { useEffect } from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
 
+import useCanonical from '../hooks/useCanonical';
+
 const OgwynAI = () => {
+  useCanonical('https://ogwyn.com/ogwyn-ai');
   useEffect(() => {
     document.title = 'Ogwyn AI - Yapay Zekanın Gücüyle İçerik Stratejinizi Dönüştürün';
   }, []);
@@ -25,7 +28,7 @@ const OgwynAI = () => {
       <div className="ai-features-container">
         <div className="ai-feature-block">
           <BackgroundImageLoader 
-            src="images/ai-content.jpg"
+            src="images/ai-content.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">
@@ -38,7 +41,7 @@ const OgwynAI = () => {
 
         <div className="ai-feature-block reverse">
           <BackgroundImageLoader 
-            src="images/model.jpg"
+            src="images/model.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">
@@ -51,7 +54,7 @@ const OgwynAI = () => {
 
         <div className="ai-feature-block">
           <BackgroundImageLoader 
-            src="images/trends.jpg"
+            src="images/trends.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">
@@ -63,7 +66,7 @@ const OgwynAI = () => {
         </div>
 
         <div className="ai-feature-block reverse">
-          <div className="ai-feature-image" style={{ backgroundImage: "url('images/visuals.jpg')" }}></div>
+          <div className="ai-feature-image" style={{ backgroundImage: "url('images/visuals.webp')" }}></div>
           <div className="ai-feature-text">
             <h3>Marka Estetiğinizi Yansıtan Görseller</h3>
             <p>

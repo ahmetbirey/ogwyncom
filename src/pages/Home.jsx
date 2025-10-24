@@ -10,7 +10,10 @@ import ErrorMessage from '../components/ErrorMessage';
 import { useFeaturedArticles } from '../hooks/useArticles';
 import broadcastsData from '../data/broadcasts.json';
 
+import useCanonical from '../hooks/useCanonical';
+
 const Home = () => {
+  useCanonical('https://ogwyn.com/');
   const { 
     articles: featuredArticles, 
     loading: articlesLoading, 

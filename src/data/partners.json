@@ -3,27 +3,37 @@
     {
       "id": "biries",
       "name": "Biries",
-      "logo": "images/partner-biries.svg"
+      "logo": "images/partner-biries.svg",
+      "width": 180,
+      "height": 24
     },
     {
       "id": "neslihan",
       "name": "Neslihan Biri",
-      "logo": "images/partner-neslihan.svg"
+      "logo": "images/partner-neslihan.svg",
+      "width": 269,
+      "height": 22
     },
     {
       "id": "wilmann",
       "name": "Wilmann",
-      "logo": "images/partner-wilmann.svg"
+      "logo": "images/partner-wilmann.svg",
+      "width": 208,
+      "height": 22
     },
     {
       "id": "koru",
       "name": "Koru",
-      "logo": "images/partner-koru.svg"
+      "logo": "images/partner-koru.svg",
+      "width": 165,
+      "height": 30
     },
     {
       "id": "gazi",
       "name": "Gazi",
-      "logo": "images/partner-gazi.svg"
+      "logo": "images/partner-gazi.svg",
+      "width": 66,
+      "height": 70
     }
   ]
 }

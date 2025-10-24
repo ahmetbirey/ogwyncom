@@ -5,9 +5,12 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { useArticle } from '../hooks/useArticles';
 
+import useCanonical from '../hooks/useCanonical';
+
 const Article = () => {
   const { slug } = useParams();
   const { article, loading, error, refetch } = useArticle(slug);
+  useCanonical(`https://ogwyn.com/article/${slug}`);
 
   if (loading) {
     return (

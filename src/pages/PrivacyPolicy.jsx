@@ -1,6 +1,9 @@
 import AnimatedSection from '../components/AnimatedSection';
 
+import useCanonical from '../hooks/useCanonical';
+
 const PrivacyPolicy = () => {
+  useCanonical('https://ogwyn.com/gizlilik-politikasi');
   return (
     <div className="article-page">
       <AnimatedSection>

@@ -3,7 +3,10 @@ import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
 import broadcastsData from '../data/broadcasts.json';
 
+import useCanonical from '../hooks/useCanonical';
+
 const Broadcast = () => {
+  useCanonical('https://ogwyn.com/broadcast');
   const broadcasts = broadcastsData.broadcasts;
 
   return (
@@ -25,7 +28,7 @@ const Broadcast = () => {
       <div className="ai-features-container">
         <div className="ai-feature-block">
           <BackgroundImageLoader 
-            src="images/podgw.jpg"
+            src="images/podgw.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">
@@ -41,7 +44,7 @@ const Broadcast = () => {
 
         <div className="ai-feature-block reverse">
           <BackgroundImageLoader 
-            src="images/youtube.jpg"
+            src="images/youtube.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">
@@ -56,7 +59,7 @@ const Broadcast = () => {
 
         <div className="ai-feature-block">
           <BackgroundImageLoader 
-            src="images/dj.png"
+            src="images/dj.webp"
             className="ai-feature-image"
           />
           <div className="ai-feature-text">

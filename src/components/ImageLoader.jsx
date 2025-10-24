@@ -51,7 +51,7 @@ const ImageLoader = ({
     return loadingComponent || (
       <div className={`image-loader-placeholder ${className}`} style={style}>
         <div className="breathing-logo">
-          <img src="/images/logo.svg" alt="Loading..." />
+          <img src="/images/logo.svg" alt="Loading..." width="88" height="35" />
         </div>
       </div>
     );
@@ -61,7 +61,7 @@ const ImageLoader = ({
     return (
       <div className={`image-loader-error ${className}`} style={style}>
         <div className="breathing-logo">
-          <img src="/images/logo.svg" alt="Error loading image" />
+          <img src="/images/logo.svg" alt="Error loading image" width="88" height="35" />
         </div>
       </div>
     );

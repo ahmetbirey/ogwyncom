@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import navigationData from '../data/navigation.json';
-import { subscribeToNewsletter } from '../config/firebase';
+
 
 const iconMap = {
   facebook: FaFacebook,
@@ -30,6 +30,7 @@ const Footer = () => {
     setMessage('');
     
     try {
+      const { subscribeToNewsletter } = await import('../config/firebase');
       const result = await subscribeToNewsletter(email);
       setMessage(result.message);
       setMessageType('success');
@@ -51,7 +52,7 @@ const Footer = () => {
     <footer className="footer-wrapper">
       <div className="footer-container">
         <div className="footer-column subscribe-column">
-          <img src="/images/logo.svg" alt="OGW Logo" className="footer-logo" />
+          <img src="/images/logo.svg" alt="OGW Logo" className="footer-logo" width="88" height="35" />
           <h4>Bültenimize katılın</h4>
           <p>İlham verici içeriklere ilk siz ulaşın. Haftada 43 e-posta değil, ayda sadece 2 tane.</p>
           <form className="subscribe-form" onSubmit={handleSubscribe}>
@@ -91,7 +92,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-column links-column">
-          <h6>Site Haritası</h6>
+          <h5>Site Haritası</h5>
           <ul>
             {navigationData.footerNavigation.siteMap.map((item, index) => (
               <li key={index}>
@@ -102,7 +103,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-column links-column">
-          <h6>Şirket</h6>
+          <h5>Şirket</h5>
           <ul>
             {navigationData.footerNavigation.company.map((item, index) => (
               <li key={index}>

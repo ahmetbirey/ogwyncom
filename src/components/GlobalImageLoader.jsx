@@ -9,7 +9,7 @@ const GlobalImageLoader = () => {
     <div className="global-image-loader">
       <div className="global-loader-content">
         <div className="breathing-logo">
-          <img src="/images/logo.svg" alt="Loading images..." />
+          <img src="/images/logo.svg" alt="Loading images..." width="88" height="35" />
         </div>
         <p>İçerikler yükleniyor...</p>
       </div>

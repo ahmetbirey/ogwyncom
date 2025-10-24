@@ -4,7 +4,10 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { useArticles } from '../hooks/useArticles';
 
+import useCanonical from '../hooks/useCanonical';
+
 const Bulletin = () => {
+  useCanonical('https://ogwyn.com/bulten');
   const { 
     articles, 
     loading, 

@@ -57,7 +57,7 @@ const BackgroundImageLoader = ({
       <div className={`bg-image-loader-placeholder ${className}`} style={style} {...props}>
         {loadingComponent || (
           <div className="breathing-logo-overlay">
-            <img src="/images/logo.svg" alt="Loading..." />
+            <img src="/images/logo.svg" alt="Loading..." width="88" height="35" />
           </div>
         )}
         {children}
@@ -77,7 +77,7 @@ const BackgroundImageLoader = ({
     return (
       <div className={`bg-image-loader-error ${className}`} style={style} {...props}>
         <div className="breathing-logo-overlay">
-          <img src="/images/logo.svg" alt="Error loading image" />
+          <img src="/images/logo.svg" alt="Error loading image" width="88" height="35" />
         </div>
         {children}
       </div>
