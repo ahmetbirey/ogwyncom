@@ -1,4 +1,4 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -91,9 +91,9 @@ const Article = () => {
               <h4>Etiketler:</h4>
               <div className="tags-list">
                 {article.tags.map((tag, index) => (
-                  <span key={index} className="tag">
+                  <Link to={`/etiket/${tag.replace(/#/g, '')}`} key={index} className="tag">
                     {tag.startsWith('#') ? tag : `#${tag}`}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
