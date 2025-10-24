@@ -840,11 +840,8 @@ a { color: inherit; text-decoration: none; transition: background-color 0.2s eas
     margin: 0 auto 2.5rem auto;
     padding-bottom: 56.25%; /* 16:9 oranını korumak için */
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 oranını korumak için YÜKSEKLİK verir */
-    height: 0;              /* Yüksekliği padding ile kontrol etmek için sıfırlanır */
     border-radius: 10px;
     background-size: contain; /* Görseli kırpmadan sığdır */
-    background-size: contain; /* Görseli kırpmadan sığdırır */
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent; /* Kenar boşlukları için sayfa arka planı */

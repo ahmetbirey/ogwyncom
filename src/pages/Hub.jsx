@@ -2,17 +2,13 @@ import { useEffect } from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
 import { Bot, MessageCircleMore } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
-const Hub = () => {  
+const Hub = () => {
+  useEffect(() => {
+    document.title = 'OGW HUB - Projelerinizi Tek Merkezden Yönetin';
+  }, []);
   return (
     <>
-      <Helmet>
-        <title>OGW HUB - Projelerinizi Tek Merkezden Yönetin</title>
-        <link rel="canonical" href="https://ogwyn.com/hub" />
-        <meta name="description" content="OGW HUB, SEO analizinden ekip yönetimine, e-ticaret optimizasyonundan yapay zeka destekli müşteri iletişimine kadar tüm süreçleri tek bir sezgisel panelden yönetmenizi sağlar." />
-      </Helmet>
-
       <AnimatedSection 
         animationType="content-section" 
         style={{ paddingTop: '12rem', paddingBottom: '6rem' }}

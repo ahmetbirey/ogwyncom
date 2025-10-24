@@ -1,7 +1,6 @@
 import BroadcastCard from '../components/BroadcastCard';
 import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
-import { Helmet } from 'react-helmet-async';
 import broadcastsData from '../data/broadcasts.json';
 
 const Broadcast = () => {
@@ -9,12 +8,6 @@ const Broadcast = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Broadcast & Publishing - OGW Marketing Studio</title>
-        <link rel="canonical" href="https://ogwyn.com/broadcast" />
-        <meta name="description" content="PODGW podcast serimizden profesyonel müzik prodüksiyonuna, YouTube'dan Spotify'a kadar tüm dijital yayıncılık süreçlerinizde stratejik ortağınız oluyoruz." />
-      </Helmet>
-
       <AnimatedSection 
         animationType="content-section" 
         className="content-section"

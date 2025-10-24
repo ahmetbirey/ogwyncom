@@ -52,8 +52,7 @@ const staticPages = [
   { url: '/magaza', priority: '0.8', changefreq: 'weekly' },
   { url: '/ogwyn-ai', priority: '0.8', changefreq: 'monthly' },
   { url: '/iletisim', priority: '0.7', changefreq: 'monthly' },
-  { url: '/gizlilik-politikasi', priority: '0.3', changefreq: 'yearly' },
-  { url: '/hub/on-siparis', priority: '0.6', changefreq: 'monthly' }
+  { url: '/gizlilik-politikasi', priority: '0.3', changefreq: 'yearly' }
 ];
 
 async function generateSitemap() {
@@ -120,7 +119,7 @@ async function generateSitemap() {
 
     // Statik sayfaları ekle
     staticPages.forEach(page => {
-      const lastmod = new Date().toISOString().split('T')[0]; // Betiğin çalıştığı günün tarihini kullan
+      const lastmod = new Date().toISOString().split('T')[0];
       sitemap += `  <url>
     <loc>${BASE_URL}${page.url}</loc>
     <lastmod>${lastmod}</lastmod>
@@ -133,13 +132,7 @@ async function generateSitemap() {
 
     // Makale sayfalarını ekle
     articles.forEach(article => {
-      // Tarih formatının her zaman geçerli olduğundan emin olalım
-      let lastmod;
-      try {
-        lastmod = new Date(article.lastmod).toISOString().split('T')[0];
-      } catch (e) {
-        lastmod = new Date().toISOString().split('T')[0]; // Hata durumunda bugünün tarihini kullan
-      }
+      const lastmod = new Date(article.lastmod).toISOString().split('T')[0];
       sitemap += `  <url>
     <loc>${BASE_URL}/article/${article.slug}</loc>
     <lastmod>${lastmod}</lastmod>

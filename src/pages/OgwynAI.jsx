@@ -1,16 +1,13 @@
+import { useEffect } from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import BackgroundImageLoader from '../components/BackgroundImageLoader';
-import { Helmet } from 'react-helmet-async';
 
 const OgwynAI = () => {
+  useEffect(() => {
+    document.title = 'Ogwyn AI - Yapay Zekanın Gücüyle İçerik Stratejinizi Dönüştürün';
+  }, []);
   return (
     <>
-      <Helmet>
-        <title>Ogwyn AI - Yapay Zekanın Gücüyle İçerik Stratejinizi Dönüştürün</title>
-        <link rel="canonical" href="https://ogwyn.com/ogwyn-ai" />
-        <meta name="description" content="Ogwyn AI, markanızın sesini analiz eder, hedef kitlenizin beklentilerini anlar ve saniyeler içinde etkileşimi yüksek metinler, görseller ve pazarlama fikirleri üretir." />
-      </Helmet>
-
       <AnimatedSection 
         animationType="content-section" 
         style={{ paddingTop: '12rem', paddingBottom: '6rem' }}
