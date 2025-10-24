@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from './pages/NotFound';
 
+import { Analytics } from '@vercel/analytics/react';
+
 const Bulletin = lazy(() => import('./pages/Bulletin'));
 const HubPreorder = lazy(() => import('./pages/HubPreorder'));
 const Article = lazy(() => import('./pages/Article'));
@@ -45,6 +47,7 @@ function App() {
             } />
           </Routes>
         </Suspense>
+        <Analytics />
       </Router>
     </AuthProvider>
   );
