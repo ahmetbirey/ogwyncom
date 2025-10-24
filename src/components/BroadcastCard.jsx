@@ -1,5 +1,3 @@
-import useScrollAnimation from '../hooks/useScrollAnimation';
-
 import { useState } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
